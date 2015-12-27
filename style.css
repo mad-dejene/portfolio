@@ -1,3 +1,28 @@
+.animationload {
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background-color:black;
+z-index:999999;
+}
+ 
+.loader {
+width:200px;
+text-indent:-99999px;
+height:200px;
+font-size:0;
+position:absolute;
+left:50%;
+top:50%;
+background-image:url(https://www.bookry.com/static/working-white.gif);
+background-repeat:no-repeat;
+background-position:center;
+margin:-100px 0 0 -100px;
+}
+ 
+
 body{
   margin:0px;
 }
@@ -77,8 +102,8 @@ h2{
 }
 
 .photos .item  img{
-    width: 50%;
-    height:50%;
+    
+    height:80%;
     margin: auto;
     border: black 1px solid;
 }
