@@ -1,0 +1,159 @@
+<html>
+	<head>
+		<script src="processing-1.4.1.js"></script>
+		<script type="text/processing" data-processing-target="mycanvas">
+		var movingRight = true;
+		
+		var Car = function(){
+			this.drawCar = function(x){
+				//draws car
+				fill(0,0,200);
+				rect(x, height - 30,100,20);
+				rect(x + 15,height - 50,70, 40);
+		
+				//draw the wheels
+				fill(50,50,50);
+				ellipse(x + 25, height - 12,24,24);
+				ellipse(x + 75, height - 12,24,24);
+			};
+		};//end of car function
+		
+		//draws the building
+		var Building = function(xPosition, yPosition, width, height){
+		//assign variables
+			this.xPosition = xPosition;
+			this.yPosition = yPosition;
+			this.otherXPosition = 0;
+			this.width = width;
+			this.height = height;
+			
+			//drawing building
+			this.drawBuilding =function(r,g,b){
+				noStroke();
+				fill(r,g,b);
+				rect(this.xPosition,this.yPosition,this.width, this.height);
+			}; //end of draw function
+			
+			//move building function
+			this.moveBuilding = function(speed) {
+				if(movingRight){
+					this.xPosition = this.xPosition - speed;
+				}
+				else{
+				this.xPosition = this.xPosition + speed;
+				}
+				
+			}; //move building 
+			
+		}; //end of building class
+		
+		
+		var Layer = function(layerWidth, buildingWidthLimit,layerHeight,r,g,b){
+			// assigning parameters
+			this.layerWidth = layerWidth;
+			this.buildingWidthLimit = buildingWidthLimit;
+			this.currentWidth  = 0;
+			this.layerHeight = layerHeight;
+			this.r = r;
+			this.b = b;
+			this.g = g;
+			//creating the array
+			this.arrayBuilding = new Array();
+			this.xScroll = 0;
+			
+			//adding a building
+			this.addBuilding = function(){
+				this.width = Math.floor(random(50,this.buildingWidthLimit));
+				this.height = Math.floor(random(100,this.layerHeight));
+				//creates new building and adds to array
+				this.building = new Building(this.currentWidth,height - this.height,this.width, this.height); //xPosition, yPosition, width, height
+				this.arrayBuilding.push(this.building);
+				this.currentWidth = this.currentWidth + this.width - 3 ;
+				
+				
+			};// ends addBuilding
+			
+			this.drawLayer = function(this.r,this.g,this.b){
+				for (var i = 0; i< this.arrayBuilding.length; i++){
+					this.arrayBuilding[i].drawBuilding(this.r,this.g,this.b);
+				} //end for loop
+			}; //ends drawLayer
+			
+			while(this.layerWidth >= this.currentWidth){
+			
+				this.addBuilding(); //creates buildings to fill up screen
+				
+				} //ends while loop
+			
+			// keeps currentWidth
+
+			this.xScroll = this.currentWidth;
+			
+			//moves the buildings in the layer	
+			this.moveLayer = function(speed){
+				for(var i=0; i < this.arrayBuilding.length; i++){
+					this.arrayBuilding[i].moveBuilding(speed);
+				}
+					
+				if(this.xScroll  < this.currentWidth){
+						this.addBuilding();
+						
+				}
+				if(movingRight){
+					this.xScroll=this.xScroll - speed;
+				}
+				else{
+					this.xScroll=this.xScroll + speed;
+				}
+				
+					
+			}; //end of moveLayer function
+			
+		}; //ends layer functions
+		
+		size(800,600);//setting size of screen
+		
+		var layer1 = new Layer (width,200,200,0,0,0); 
+		var layer2 = new Layer(width,100,400,153,12,31);
+		var layer3 = new Layer(width,50,550,50,0,0);
+		var car = new Car();
+		//var car = new Car();
+		//new layer
+		//start of draw loop
+		void draw(){  
+			background(30,49,61);
+			fill(255,255,240);
+			ellipse(700,100,100,100);
+
+			//building1.drawBuilding(255,0,0);
+			layer3.drawLayer();
+			layer2.drawLayer();
+			layer1.drawLayer();
+			
+			//moves the layers
+			layer1.moveLayer(3);
+			layer2.moveLayer(2);
+			layer3.moveLayer(1);
+			
+			// draws the car
+			car.drawCar(width/2);
+			
+			
+		}; //end of draw loop
+		
+		void keyPressed() {
+		  if (keyCode == RIGHT) {
+			movingRight = true;
+
+		  }
+		 else if (keyCode == LEFT) {
+			movingRight = false;
+		  }
+
+		}
+		</script>
+	</head>
+	<body>
+		<canvas id="mycanvas"></canvas>
+	</body>
+</html>

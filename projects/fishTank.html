@@ -1,0 +1,124 @@
+<html>
+	<head>
+		<script src="processing-1.4.1.js"></script>
+		<script type="text/processing" data-processing-target="mycanvas">
+			// creating fish class
+			var Fish = function(height, width, initialX, initialY, r,g,b){
+				//assigning variables
+				this.width = width;
+				this.height = height;
+				this.x = initialX;
+				this.y = initialY;
+				this.r = r;
+				this.g = g;
+				this.b = b;
+				
+				//allows the fish to swim
+				this.swim = function(speed){
+					this.x +=speed;
+					if(this.x > 1000){
+						this.x = -100;
+						this.y= Math.floor(random(500));
+						this.r = Math.floor(random(255));
+						this.g = Math.floor(random(255));
+						this.b = Math.floor(random(255));
+						this.height = Math.floor(random(30,150));
+						this.width = Math.floor(random(150,200));
+						
+					}
+				}; // ending swim function
+				
+				//draws the fishes
+				this.drawFish = function()
+				{
+					fill(this.r,this.g,this.b);
+					ellipse(this.x,this.y,this.width, this.height);
+					triangle(this.x - 10, this.y,this.x - 105,this.y + 55,this.x - 105,this.y - 55);
+					
+					fill(255, 255, 255);
+					ellipse(this.x + 25,this.y,30,30);
+    
+					fill(this.r,this.g,this.b);
+					ellipse(this.x + 25,this.y, 15, 15);  
+				};// ending drawFish class
+				
+			};// ending fish class
+			
+			//creates the bubble class and makes them float
+			var Bubbles = function(startingX, startingY)
+			{
+				//assigning variables
+				this.x = startingX;
+				this.y = startingY;
+
+				this.bubbleFloat = function()
+				{ 
+					this.y = this.y - 1;
+					if (this.y < -50){
+						this.y = 625;
+						this.x = Math.floor(random(750));
+						
+					}
+				
+				}; //end of float function
+				
+				this.drawBubble = function(radius,r,g,b){
+						noStroke();
+						fill(r,g,b);
+						ellipse(this.x,this.y,radius,radius);
+				}; //end of draw bubble
+				
+			}; //end of bubble class 
+			
+			//draw many bubbles 
+			var drawMultiBubbles = function(numberOfBubbles){
+				//for(var i = 0; i <  2; i++){
+					this.r = Math.floor(random(255));
+					this.g = Math.floor(random(255));
+					this.b = Math.floor(random(255));
+					this.x = Math.floor(random(width));
+					this.y = Math.floor(random(height));
+					this.bubble = new Bubbles(this.x,this.y)
+					this.bubble.drawBubble(10,this.r,this.g,this.b);
+					this.bubble.bubbleFloat();
+					
+					
+				
+				//}
+			
+			};//ends draw many bubbles class 
+			
+			noStroke();
+			size(800,600);
+			
+			var Nemo = new Fish(50,100,-100,400,80,98,100);
+			var Dory = new Fish(100,150,-100,100,88,198,150);
+			var Marlin = new Fish(25,50,-100,200,68,98,50);
+
+			//height, width, initialX, initialY, r,g,b
+			 //var Bubble1 = new Bubbles(100,650); // x,y
+			 //var Bubble2 = new Bubbles(300, 650); //new bubble
+			 
+			 //draw loop
+			void draw(){  
+				background(0,0,255);
+				Nemo.drawFish();
+				Nemo.swim(2);
+				
+				Dory.drawFish();
+				Dory.swim(4);
+				
+				Marlin.drawFish();
+				Marlin.swim(6);
+				
+				drawMultiBubbles(1);
+				
+				//Bubble1.drawBubble(20,100,100,100);
+				//Bubble1.bubbleFloat();
+			}
+		</script>
+	</head>
+	<body>
+		<canvas id="mycanvas"></canvas>
+	</body>
+</html>

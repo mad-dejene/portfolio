@@ -1,0 +1,127 @@
+#gameBorder{
+	height: 850px;
+	width: 700px;
+	background-color: #ABDFE3;
+}
+#one,#two,#three,#four,#five,#six,#seven,#eight,#nine{
+	height: 200px;
+	 width: 200px;
+	float: left;
+}
+.one{
+	background-image:url("mound_1.png");
+  }
+.one:hover{
+	background-image:url("mound_1_hover.png");
+  }
+.pen1{
+	background-image:url("penguin_1.png");
+  }
+  
+.two{
+	background-image:url("mound_2.png"); 
+  }
+.two:hover{
+	background-image:url("mound_2_hover.png");
+  }
+.pen2{
+	background-image:url("penguin_2.png");
+  }
+  
+.three{
+	background-image:url("mound_3.png");
+  }
+.three:hover{
+	background-image:url("mound_3_hover.png");
+  }
+.pen3{
+	background-image:url("penguin_3.png");
+  }
+  
+.four{
+	background-image:url("mound_4.png");
+  }
+.four:hover{
+	background-image:url("mound_4_hover.png");
+  }
+.pen4{
+	background-image:url("penguin_4.png");
+  }
+  
+.five{
+	background-image:url("mound_5.png");
+  }
+.five:hover{
+	background-image:url("mound_5_hover.png");
+  }
+.pen5{
+	background-image:url("penguin_5.png");
+  }
+  
+.six{
+	background-image:url("mound_6.png");
+  }
+.six:hover{
+	background-image:url("mound_6_hover.png");
+  }
+.pen6{
+	background-image:url("penguin_6.png");
+  }
+  
+.seven{
+	background-image:url("mound_7.png");
+  }
+.seven:hover{
+	background-image:url("mound_7_hover.png");
+  }
+.pen7{
+	background-image:url("penguin_7.png");
+  }
+
+
+.eight{
+	background-image:url("mound_8.png");
+  }
+.eight:hover{
+	background-image:url("mound_8_hover.png");
+  }
+.pen8{
+	background-image:url("penguin_8.png");
+  }
+
+
+.nine{
+	background-image:url("mound_9.png");
+  }
+.nine:hover{
+	background-image:url("mound_9_hover.png");
+  }
+.yeti{
+	background-image:url("yeti.png");
+  }
+  
+  a{
+	height:50px;
+	width:120px;
+	border-color:#6495ED;
+	background-color:#BCD2EE;
+	border-radius:5px;
+	margin:auto;
+	text-align:center;
+	padding:5px;	
+	text-decoration: none;
+	font-size:24px;
+}
+
+a:hover{
+	color:black;
+	background-color:#D1D9F0;
+}
+
+a:visited {
+	color: grey;
+}
+
+body	{
+	background-color: #413399;
+}	
