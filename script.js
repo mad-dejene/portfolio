@@ -13,9 +13,14 @@
             $('#notHide2').addClass('newClass');
      });
      
+     $('#img3').click(function(){
+            $('#notHide3').addClass('newClass');
+     });
+
      $('.exit').click(function(){
         	$('#notHide').removeClass('newClass');
         	$('#notHide2').removeClass('newClass');
+        	$('#notHide3').removeClass('newClass');
      });
 
      var $root = $('html, body');

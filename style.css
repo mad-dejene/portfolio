@@ -161,13 +161,14 @@ iframe{
   width:300px;
   display:none;
 }
-.container .show2{
+.show3{
   position: absolute;
   top:35%;
   text-align:center;
   width:300px;
-  display: none;
+  display:none;
 }
+
 .container{
   font-size:40px;
   float:left;
@@ -181,7 +182,7 @@ iframe{
   opacity: 0.4;
   filter: alpha(opacity=40); 
 }
-.container:hover .show, .container:hover .show2{
+.container:hover .show, .container:hover .show2,.container:hover .show3{
   display:block;
 }
 
