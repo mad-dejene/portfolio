@@ -6,21 +6,27 @@
 	});
 
 	 $('#img1').click(function(){
-            $('#notHide').addClass('newClass');
+            $('#notHide2').addClass('newClass');
      });
 
      $('#img2').click(function(){
-            $('#notHide2').addClass('newClass');
+            $('#notHide3').addClass('newClass');
      });
      
      $('#img3').click(function(){
-            $('#notHide3').addClass('newClass');
+            $('#notHide4').addClass('newClass');
+     });
+
+     $('#img4').click(function(){
+            $('#notHide5').addClass('newClass');
      });
 
      $('.exit').click(function(){
-        	$('#notHide').removeClass('newClass');
         	$('#notHide2').removeClass('newClass');
         	$('#notHide3').removeClass('newClass');
+        	$('#notHide4').removeClass('newClass');
+            $('#notHide5').removeClass('newClass');
+        	
      });
 
      var $root = $('html, body');
@@ -39,5 +45,10 @@
 	    $root.stop();
 	  }
 	});
+
+	 $('#mainPoetry').click(function(){
+            $('#thing').addClass('newClass');
+     });
+   
 	
 });
