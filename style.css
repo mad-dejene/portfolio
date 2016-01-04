@@ -1,3 +1,61 @@
+* {
+margin: 0;
+}
+
+html {
+margin: 0;
+}
+
+body {
+margin: 0;
+}
+
+.progressbar {
+  background-color: white;
+  border-radius: 13px; /* (height of inner div) / 2 + padding */
+  padding: 3px;
+  width:60%;
+  border:black solid 1px;
+  position: relative;
+  left: 20%;
+  text-align: center;
+}
+
+.progressbar > div {
+   background-color: black;
+    /* Adjust with JavaScript */
+   height: 20px;
+   border-radius: 10px;
+ }
+
+#progressbar1 > div{
+  width: 90%;
+}
+
+#progressbar2 > div{
+  width: 85%;
+}
+
+#progressbar3 > div{
+  width: 70%;
+}
+
+#progressbar4 > div{
+  width: 55%;
+}
+
+#progressbar5 > div{
+  width: 50%;
+}
+
+#progressbar6 > div{
+  width: 50%;
+}
+
+
+
+
+
 .animationload {
 position:fixed;
 top:0;
@@ -28,18 +86,21 @@ float: left;
 font-size:26px;
 }
 
-.navbar{
+#photo{
+  display:none;
+}
+ 
+#header{
   border: 1px black solid;
   background-color: black;
   text-align:right;
   width:100%;
-  padding:5px;
- 
   position:fixed;
   z-index:10000;
+  display:none;
 }
 
-.navbar a{
+#header a{
   text-decoration:none;
   padding:10px;
   color: white;
@@ -47,13 +108,13 @@ font-size:26px;
   font-size: 18px;
 
 }
-.navbar a:active{
+#header a:active{
   text-decoration:none;
   padding:10px;
   color: white;
 
 }
-.navbar a:hover{
+#header a:hover{
   color: grey;
 
 }
@@ -61,7 +122,11 @@ font-size:26px;
 h2{
   font-size: 32px;
   font-family: cursive;
-  text-align: center;;
+  text-align: center;
+}
+
+.topPage{
+  display:none;
 }
 
 .topPage img{
@@ -81,7 +146,7 @@ h2{
 	text-align: center;
 }
 
-.aboutme  p {
+.aboutme  p{
   font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
   letter-spacing:1.5px;
   text-align:center;
@@ -94,23 +159,23 @@ h2{
   padding-right: 40px;
 }
 
-.aboutme{
+.aboutMe{
   background-color:black;
   color: white;
+  display:none;
 }
 
 .photos .item  img{
-    
     height:80%;
     margin: auto;
     border: black 1px solid;
 }
 
-.code{
+#code{
   color: white;
   background-color: black;
-  position: relative;
-  height:80%;
+  display:none;
+  overflow:hidden;
 }
 
 .mainP{
@@ -143,35 +208,8 @@ iframe{
   height:600px;
 }
 
-#wattpad{
-  width: 40%;
-  height: 40%;
-
-}
 .newClass{
   display:block;
-}
-.show{
-  position: absolute;
-  top:35%;
-  left:0;
-  text-align:center;
-  width:300px;
-  display:none;
-}
-.show2{
-  position: absolute;
-  top:35%;
-  text-align:center;
-  width:300px;
-  display:none;
-}
-.show3{
-  position: absolute;
-  top:35%;
-  text-align:center;
-  width:300px;
-  display:none;
 }
 
 #poetry{
@@ -187,6 +225,8 @@ iframe{
   position: absolute;
   left: 30%;
   top: 30%;
+  width: 40%;
+  height: 40%;
 }
 
 .pc{
@@ -195,28 +235,54 @@ iframe{
 }
 
 .container{
-  font-size:40px;
-  float:left;
-  border:white 1px solid;
-  margin-left:10px;
+  font-size:60px;
+  width:300px;
+  padding-left:10px;
+  padding-right:10px;
+  float:left;  
 }
+
 .container img{
   width:300px;
 }
-.container:hover img{
-  opacity: 0.4;
+
+.container:hover{
+  opacity: 0.3;
   filter: alpha(opacity=40); 
 }
-.container:hover .show, .container:hover .show2,.container:hover .show3{
-  display:block;
+
+/*.container_last{
+  font-size:60px;
+  width:300px;
+  padding-left:10px;
+  padding-right:10px;
+   /*float:left;*/
+  /*overflow: auto;
+  
 }
 
+.container_last img{
+  width:300px;
+}
+
+.container_last:hover{
+  opacity: 0.3;
+  filter: alpha(opacity=40); 
+}
+*/
+
 .art img{
-  width: 300px;
-  padding:2.5px;
+  width: 20%;
+  padding: 2.5px;
+}
+
+.art{
+   display:none;
+   background-color:white;
 }
 
 .poetry{
   background-color:black;
   color: white;
+   display:none;
 }

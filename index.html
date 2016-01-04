@@ -18,9 +18,10 @@
 				</div>
 				<a href="#me">About Me</a>
 				<a href="#photo">Photography</a>
-				<a href="#code">Coding Projects</a>
+				<a href="#code">Code</a>
 				<a href="#art">Art</a>
 				<a href="#poems">Poetry</a>
+				<a href="#con">Contacts</a>
 			</div>
 		</div>
 		
@@ -31,14 +32,16 @@
 		</div>
 		
 		<div class="aboutMe" id="me">
-			</br></br></br><br>
+			</br></br></br></br>
 			<h2>About me</h2>
-			<p>I am 17 years old, and I am a senior in Cambridge Rindge and Latin. I love to sing, code, draw, write, and take photos. I am hard working, creative, and curious. I love learning new things and exploring complex ideads.</p>
-			</br></br></br><br>
+			<center>
+				<p>I am 17 years old, and I am a senior in Cambridge Rindge and Latin. I love to sing, code, draw, write, and take photos. I love learning new things and exploring complex ideads.</p>
+			<center>
+			</br></br></br></br>
 		</div>
 
 		<div id= "photo">
-			</br></br></br><br>
+			</br></br></br></br>
 			<h2>Photography</h2>
 			<div class ="photos" role="listbox">
 				<div class ="item"><img src="photos/pic.jpg"/></div>
@@ -49,55 +52,62 @@
 				<div class ="item"><img src="photos/pic6.jpg"/></div>
 				<div class ="item"><img src="photos/pic7.jpg"/></div>
 			</div>
-			</br></br></br><br>
+			</br></br></br></br>
 		</div>
-		
-		<div class="code" id="code"> 
-			</br></br></br><br>
+		<div id="code" class="code">
+			</br></br></br></br>
+			<h2>Coding Languages</h2></br>
+				<div class="progressbar" id="progressbar1"><div>HTML</div></div>
+				<div class="progressbar" id="progressbar2"><div>CSS</div></div>
+				<div class="progressbar" id="progressbar3"><div>Javascript</div></div>
+				<div class="progressbar" id="progressbar4"><div>Python</div></div>
+				<div class="progressbar" id="progressbar5"><div>Java</div></div>
+				<div class="progressbar" id="progressbar6"><div>jQuery</div></div>
+			</br></br>
 
 			<h2>Coding Projects</h2>
 
-			<div class="container" id="img1">
-				<img src="projects/city.jpg"/>
-				<h3 class="show">+</a> 
-			</div> 
+			<div>
+				<div class="container" id="img1">
+					<img src="projects/city.jpg"/> 
+				</div> 
 
-			<div class="container" id="img2">
-				<img src="projects/pen.jpg"/>
-				<h3 class="show2">+</a>
-			</div> 
+				<div class="mainP" id="notHide2">
+					<div id="p4" class="project">
+						<iframe src="projects/cityScroller.html"></iframe>
+					</div>
+					<div class="exit">X</div>
+				</div>
+
+				 <div class="container" id="img2">
+					<img src="projects/pen.jpg"/>
+				</div> 
+
+				<div class="mainP" id="notHide3">
+					<div id="p2" class="project">
+						<iframe src="projects/penguinGame.html"></iframe>
+					</div>
+					<div class="exit">X</div>
+				</div>
+
+				<div class="container" id="img3">
+					<img src="projects/nightAndDay.jpg"/>
+				</div> 
+
+				<div class="mainP" id="notHide4">
+					<div id="p3" class="project">
+						<iframe src="projects/nightAndDay.html"></iframe>
+					</div>
+					<div class="exit">X</div>
+				</div>
+			</div>
 			
-			<div class="container" id="img3">
-				<img src="projects/nightAndDay.jpg"/>
-				<h3 class="show3">+</a>
-			</div> 
-
-			<div class="mainP" id="notHide3">
-				<div id="p2" class="project">
-					<iframe src="projects/penguinGame.html"></iframe>
-				</div>
-				<div class="exit">X</div>
-			</div>
-			<div class="mainP" id="notHide4">
-				<div id="p3" class="project">
-					<iframe src="projects/nightAndDay.html"></iframe>
-				</div>
-				<div class="exit">X</div>
-			</div>
-
-			<div class="mainP" id="notHide2">
-				<div id="p4" class="project">
-					<iframe src="projects/cityScroller.html"></iframe>
-				</div>
-				<div class="exit">X</div>
-			</div>
-
-			</br></br></br><br>
+		</br></br></br></br></br></br></br></br>
 		</div>
-
 		<div class="art" id="art">
 			</br></br></br></br>
 			<h2>Art</h2>
+
 			<center>
 				<img src="Art/art2.jpg"/>
 				<img src="Art/art6.jpg"/>
@@ -107,7 +117,6 @@
 				<img src="Art/art3.jpg"/>
 				<img src="Art/art5.jpg"/>
 			</center>
-
 	
 			</br></br></br><br>
 		</div>
@@ -127,9 +136,7 @@
 					<div class="exit">X</div>
 				</div>
 			</center>
-			</br></br></br><br>
 		</div>
-
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 		<script src="script.js"></script> 
@@ -137,10 +144,18 @@
 		   (function($) {
 			     "use strict";
 			     $(window).load(function() {
-			     $(".loader").delay(6000).fadeOut();
-			     $(".animationload").delay(1000).fadeOut("slow");
+				     $(".loader").delay(6000).fadeOut();
+				     $(".animationload").delay(1000).fadeOut("slow");
+				     $("#header").delay(2500).fadeIn("slow");
+				     $(".topPage").delay(3000).fadeIn("slow");
+				     $(".aboutMe").delay(3500).fadeIn("slow");
+				     $("#photo").delay(4000).fadeIn("slow");
+				     $(".code").delay(4500).fadeIn("slow");
+				     $(".art").delay(5000).fadeIn("slow");
+				     $(".poetry").delay(5500).fadeIn("slow");
 			     });
 		 	})(jQuery);
+
 		</script>
 	</body>
 

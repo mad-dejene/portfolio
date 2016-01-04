@@ -49,6 +49,4 @@
 	 $('#mainPoetry').click(function(){
             $('#thing').addClass('newClass');
      });
-   
-	
 });
