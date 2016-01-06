@@ -13,32 +13,40 @@
 
 		<div id="header">
 			<div class="navbar">
+				<a href="#me"><i class="fa fa-user"></i> About Me</a>
+				<a href="#photo"><i class="fa fa-camera-retro"></i> Photography</a>
+				<a href="#art"><i class="fa fa-picture-o"></i> Art</a>
+				<a href="#code"><i class="fa fa-laptop"></i> Code</a>
+				<a href="#poems"><i class="fa fa-book"></i> Poetry</a>
+				<a href="footer"><i class="fa fa-phone"></i> Contacts</a>
+				
 				<div id="mad">
 					<a href="#top">M.A.D.</a>
 				</div>
-				<a href="#me">About Me</a>
-				<a href="#photo">Photography</a>
-				<a href="#code">Code</a>
-				<a href="#art">Art</a>
-				<a href="#poems">Poetry</a>
-				<a href="#con">Contacts</a>
 			</div>
 		</div>
-		
+
+		</br></br>
+		<div class="otherSpace"></div>
 		<div class="topPage" id="top">
 			</br></br></br></br></br>
 			<img src="pro2.jpg"/>
 			<h1>Metasebia Awlachew Dejene</h1>
 		</div>
-		
+
+		<div class="space"></div>
+
 		<div class="aboutMe" id="me">
 			</br></br></br></br>
 			<h2>About me</h2>
 			<center>
-				<p>I am 17 years old, and I am a senior in Cambridge Rindge and Latin. I love to sing, code, draw, write, and take photos. I love learning new things and exploring complex ideads.</p>
+				<p>I am 17 years old, and I am a senior in Cambridge Rindge and Latin. I love to sing, code, draw, write, and take photos. I am passionate about technology. I entend to presure a carrer involving Software Developement.</p>
+				<p>To learn more about me, explore this website or check out my <a href="">resume</a>. </p>
 			<center>
 			</br></br></br></br>
 		</div>
+
+		<div class="otherSpace"></div>
 
 		<div id= "photo">
 			</br></br></br></br>
@@ -54,6 +62,9 @@
 			</div>
 			</br></br></br></br>
 		</div>
+
+		<div class="space"></div>
+
 		<div id="code" class="code">
 			</br></br></br></br>
 			<h2>Coding Languages</h2></br>
@@ -67,14 +78,14 @@
 
 			<h2>Coding Projects</h2>
 
-			<div>
+			<div id = "float">
 				<div class="container" id="img1">
 					<img src="projects/city.jpg"/> 
 				</div> 
 
 				<div class="mainP" id="notHide2">
 					<div id="p4" class="project">
-						<iframe src="projects/cityScroller.html"></iframe>
+						<iframe src="projects/CityScroller.html"></iframe>
 					</div>
 					<div class="exit">X</div>
 				</div>
@@ -100,10 +111,16 @@
 					</div>
 					<div class="exit">X</div>
 				</div>
+
+				<div class="container" id="img6">
+					<a href="https://github.com/mad-dejene/Past-Projects"><i class="fa fa-la fa-github-alt"></br><h2>More Projects</h2></i></a>
+				</div> 
 			</div>
-			
-		</br></br></br></br></br></br></br></br>
+			</br></br></br></br>
 		</div>
+
+		<div class="otherSpace"></div>
+
 		<div class="art" id="art">
 			</br></br></br></br>
 			<h2>Art</h2>
@@ -121,6 +138,8 @@
 			</br></br></br><br>
 		</div>
 		
+		<div class="space"></div>
+
 		<div class="poetry" id="poems">
 			</br></br></br></br>
 			<center>
@@ -137,6 +156,35 @@
 				</div>
 			</center>
 		</div>
+
+		<div class="otherSpace"></div>
+
+		<footer>
+			<div id="icon">
+				<div class="icon"><a href="https://www.linkedin.com/in/mdejene"> <i class="fa fa-la fa-linkedin"></i></a></div>
+				<div class="icon"><a href="https://github.com/mad-dejene"><i class="fa fa-la fa-github"></i></a></div>
+				<div class="icon"><a href="mailto:mad.dejene@gmail.com"><i class="fa fa-la fa-envelope-o"></i> </a></div>
+				<div class="icon"><a href="http://www.instagram.com/madsoul.photos/"><i class="fa fa-la fa-instagram"></i></a></div>
+			</div>
+		</footer>
+
+		<div class="space"></div>
+		<div id="random">
+			<div class="otherSpace"></div>
+			<div class="space"></div>
+			<div class="otherSpace"></div>
+			<div class="space"></div>
+			<div class="otherSpace"></div>
+			<div class="space"></div>
+			<div class="otherSpace"></div>
+			<div class="space"></div>
+			<div class="otherSpace"></div>
+			<div class="space"></div>
+			<div class="otherSpace"></div>
+			<div class="space"></div>
+			<div class="otherSpace"></div>
+		</div>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 		<script src="script.js"></script> 
@@ -153,6 +201,8 @@
 				     $(".code").delay(4500).fadeIn("slow");
 				     $(".art").delay(5000).fadeIn("slow");
 				     $(".poetry").delay(5500).fadeIn("slow");
+				     $(".icon").delay(6000).fadeIn("slow");
+				     $("#random").delay(6000).fadeOut("fast");
 			     });
 		 	})(jQuery);
 

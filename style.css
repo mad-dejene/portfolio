@@ -10,6 +10,63 @@ body {
 margin: 0;
 }
 
+.space{
+  background: repeating-linear-gradient(
+    45deg,
+    white,
+    white 10px,
+    black 10px,
+    black 20px
+  );
+  height:20px;
+  border: black solid 5px;
+}
+
+.otherSpace{
+  background: repeating-linear-gradient(
+    -45deg,
+    white,
+    white 10px,
+    black 10px,
+    black 20px
+  );
+  height:20px;
+  border: black solid 5px;
+}
+
+#icon{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.icon{
+  display: none;
+  border:2px black solid;
+  border-radius: 50%;
+  padding:5px;
+  margin:9px;
+  width:35px;
+  height:35px;
+  text-align: center;
+}
+
+.icon a{
+  text-decoration:none;
+  font-size:36px;
+  color:black;
+}
+
+.icon:hover{
+ border:2px white solid;
+ background-color: black;
+ 
+}
+
+.icon:hover a{
+  color: white;
+}
+
 .progressbar {
   background-color: white;
   border-radius: 13px; /* (height of inner div) / 2 + padding */
@@ -52,10 +109,6 @@ margin: 0;
   width: 50%;
 }
 
-
-
-
-
 .animationload {
 position:fixed;
 top:0;
@@ -80,10 +133,8 @@ background-position:center;
 margin:-100px 0 0 -100px;
 }
 
-
-#mad a{
-float: left;
-font-size:26px;
+#mad{
+float:left;
 }
 
 #photo{
@@ -93,27 +144,29 @@ font-size:26px;
 #header{
   border: 1px black solid;
   background-color: black;
-  text-align:right;
   width:100%;
   position:fixed;
+  text-align: right;
   z-index:10000;
   display:none;
+  font-size: 20px;
+  font-family:"Trebuchet MS", Helvetica, sans-serif;
+  height:5%;
 }
 
 #header a{
   text-decoration:none;
   padding:10px;
   color: white;
-  font-family:"Trebuchet MS", Helvetica, sans-serif;
-  font-size: 18px;
-
 }
+
 #header a:active{
   text-decoration:none;
   padding:10px;
   color: white;
 
 }
+
 #header a:hover{
   color: grey;
 
@@ -137,7 +190,7 @@ h2{
   background-size: cover;
   background-position: center center;
   border-radius: 1500px;
-  border: 5px solid grey;
+  border: 5px solid #383838 ;
 }
 
 .topPage h1{
@@ -159,6 +212,15 @@ h2{
   padding-right: 40px;
 }
 
+.aboutme a{
+  text-decoration: none;
+  color:grey;
+}
+
+.aboutme a:hover{
+  color: blue;
+}
+
 .aboutMe{
   background-color:black;
   color: white;
@@ -175,7 +237,17 @@ h2{
   color: white;
   background-color: black;
   display:none;
-  overflow:hidden;
+  
+}
+
+#img6{
+  background-color: white;
+  text-align: center;
+  font-size: 1460%;
+}
+
+#img6 a{
+  color: black;
 }
 
 .mainP{
@@ -229,6 +301,10 @@ iframe{
   height: 40%;
 }
 
+#float{
+  display: flex;
+}
+
 .pc{
   font-size:50px;
   margin-left:10px;
@@ -239,7 +315,8 @@ iframe{
   width:300px;
   padding-left:10px;
   padding-right:10px;
-  float:left;  
+  
+  cursor:pointer;
 }
 
 .container img{
@@ -250,26 +327,6 @@ iframe{
   opacity: 0.3;
   filter: alpha(opacity=40); 
 }
-
-/*.container_last{
-  font-size:60px;
-  width:300px;
-  padding-left:10px;
-  padding-right:10px;
-   /*float:left;*/
-  /*overflow: auto;
-  
-}
-
-.container_last img{
-  width:300px;
-}
-
-.container_last:hover{
-  opacity: 0.3;
-  filter: alpha(opacity=40); 
-}
-*/
 
 .art img{
   width: 20%;
