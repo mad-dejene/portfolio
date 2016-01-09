@@ -1,12 +1,14 @@
-* {
+*{
 margin: 0;
 }
 
-html {
+html{
 margin: 0;
+max-width:1280px;
+max-height:1080px;
 }
 
-body {
+body{
 margin: 0;
 }
 
@@ -199,26 +201,26 @@ h2{
 	text-align: center;
 }
 
-.aboutme  p{
+.aboutme  p, p{
   font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
   letter-spacing:1.5px;
   text-align:center;
-  margin: 40px auto;
+  margin: 50px auto;
   text-transform: lowercase;
   line-height: 145%;
   font-size: 14pt;
   font-variant: small-caps;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-.aboutme a{
+.aboutme #resume{
   text-decoration: none;
   color:grey;
 }
 
-.aboutme a:hover{
-  color: blue;
+.aboutme #resume:hover{
+  color: red;
 }
 
 .aboutMe{
@@ -259,7 +261,16 @@ h2{
   z-index: 100000;
   background-color:rgba(0,0,0,.90);
   display:none;
+}
 
+.resume{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: 100000;
+  width: 100%;
+  display:none;
+  float:left;
 }
 
 .exit{
@@ -278,6 +289,7 @@ h2{
 iframe{
   width:800px;
   height:600px;
+  float:left;
 }
 
 .newClass{

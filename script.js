@@ -21,11 +21,16 @@
             $('#notHide5').addClass('newClass');
      });
 
+     $('#resume').click(function(){
+            $('#notHide9').addClass('newClass');
+     });
+
      $('.exit').click(function(){
         	$('#notHide2').removeClass('newClass');
         	$('#notHide3').removeClass('newClass');
         	$('#notHide4').removeClass('newClass');
             $('#notHide5').removeClass('newClass');
+            $('#notHide9').removeClass('newClass');
         	
      });
 
