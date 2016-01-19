@@ -162,7 +162,8 @@ float:left;
   display:none;
   font-size: 20px;
   font-family:"Trebuchet MS", Helvetica, sans-serif;
-  height:5%;
+  height:6%;
+  max-width:1280px;
 }
 
 #header a{

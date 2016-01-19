@@ -40,7 +40,7 @@
 
 	  $root.stop().animate({
 	    scrollTop: $(href).offset().top
-	  }, 700);
+	  }, 2000);
 
 	  return false;
 	});
