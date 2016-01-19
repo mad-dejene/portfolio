@@ -12,6 +12,7 @@ body{
 margin: 0;
 }
 
+
 .project a{
   text-decoration:none;
   color: red;
@@ -247,7 +248,7 @@ h2{
 .photos .item  img{
     height:80%;
     margin: auto;
-    border: black 1px solid;
+    border: black 40px solid;
 }
 
 #code{
@@ -369,4 +370,71 @@ iframe{
   background-color:black;
   color: white;
    display:none;
+}
+
+
+
+
+
+
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5%;
+}
+
+/* The container <div> - needed to position the dropdown content */
+#header .dropdown {
+    position: relative;
+    display: none;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
+
+/* Dropdown Content (Hidden by Default) */
+#header .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    right:0;
+    left:0;
+    font-size: 20px;
+}
+
+/* Links inside the dropdown */
+#header .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+#header .dropdown-content a:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Show the dropdown menu on hover */
+#header .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+#header .dropdown:hover .dropbtn {
+    background-color: white;
+    color: black;
+}
+
+@media only screen and (max-width: 500px) {
+   #header .dropdown{
+       display: inline-block;
+   }
+   #header .navbar{
+    display: none;
+   }
 }
